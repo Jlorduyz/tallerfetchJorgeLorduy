@@ -43,6 +43,10 @@
   color: white;
   margin: 20px;
 }
+h3 {
+  text-align: center;
+  font-size: 40px;
+}
 .boton_detalles {
   align-self: center;
   width: 40%;
@@ -51,7 +55,7 @@
   padding: 10px;
   box-shadow: 0 25px 30px rgb(0, 0, 0);
   border-radius: 8px;
-  background-color: #a0153e;
+  background-color: #ff3030;
   transition-duration: 550ms;
   transform: scale(0.97);
   text-align: center;
