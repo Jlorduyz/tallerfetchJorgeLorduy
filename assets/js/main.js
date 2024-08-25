@@ -17,4 +17,6 @@ fetch(URLdescripcion)
 
 fetch(URLdepartamentos)
   .then((response) => response.json())
-  .then((response) => funcol.crear_tarjetas(response));
+  .then((response) => {
+    funcol.crear_tarjetas(response);
+  });

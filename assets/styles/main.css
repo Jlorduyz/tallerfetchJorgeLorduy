@@ -31,6 +31,7 @@
   animation-range: 0 250px;
   z-index: 3;
 }
+
 @keyframes header_bajada {
   to {
     background-color: #5d0e4138;
@@ -60,7 +61,7 @@
   }
 }
 body {
-  background-color: #ff204e;
+  background-color: #d1e9f6;
 }
 .main {
   flex-grow: 1;
@@ -115,7 +116,8 @@ body {
   text-align: center;
   padding: 35px 20px;
   height: auto;
-  background: linear-gradient(#a0153e, #ff204e);
+  background-color: #282aa1;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
 }
 .text_description {
   font-size: 18px;
@@ -123,18 +125,26 @@ body {
 }
 h1 {
   padding-top: 10px;
-  background: linear-gradient(#00224d, #a0153e);
+  background: linear-gradient(#00224d, #282aa1);
   text-align: center;
+  padding-bottom: 15px;
 }
-spam:nth-child(1) {
+h1 span:nth-child(1) {
   color: yellow;
 }
-spam:nth-child(2) {
-  color: blue;
+
+h1 span:nth-child(2) {
+  color: rgb(42, 42, 252);
 }
-spam:nth-child(3) {
+h1 span:nth-child(3) {
   color: red;
 }
+footer p {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
 .img_tarjeta {
   position: absolute;
   width: 95%;
@@ -157,4 +167,38 @@ spam:nth-child(3) {
   font-weight: 700;
   background-color: rgba(255, 255, 255, 0.274);
   transition-duration: 400ms;
+}
+.filtros {
+  display: flex;
+  flex-direction: column;
+}
+.busqueda {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: 50px;
+  width: 270px;
+  align-self: self-end;
+  padding: 20px;
+}
+.busqueda input {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #00224d;
+  border-radius: 30px;
+  padding-left: 10px;
+  z-index: 2;
+  opacity: 0;
+  transition-duration: 800ms;
+  transition-delay: 5s;
+  &:hover {
+    width: 270px;
+    opacity: 1;
+    z-index: 0;
+    transition-delay: 0ms;
+  }
+}
+.busqueda img {
+  height: 50px;
+  position: absolute;
 }
