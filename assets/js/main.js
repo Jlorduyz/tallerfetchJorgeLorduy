@@ -19,4 +19,12 @@ fetch(URLdepartamentos)
   .then((response) => response.json())
   .then((response) => {
     funcol.crear_tarjetas(response);
+    let buscar = document.getElementById("buscar");
+    buscar.addEventListener("input", function () {
+      let ABuscar = buscar.value.toLowerCase();
+      let encontrado = response.filter((item) =>
+        item.name.toLowerCase().includes(ABuscar)
+      );
+      funcol.crear_tarjetas(encontrado);
+    });
   });
