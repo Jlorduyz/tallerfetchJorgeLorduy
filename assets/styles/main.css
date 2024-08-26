@@ -113,7 +113,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  padding: 100px 0px;
+  padding: 10px 0px;
   justify-content: center;
 }
 
@@ -177,6 +177,7 @@ footer p {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  height: 10vh;
 }
 .busqueda {
   display: flex;
