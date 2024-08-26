@@ -18,13 +18,26 @@ fetch(URLdescripcion)
 fetch(URLdepartamentos)
   .then((response) => response.json())
   .then((response) => {
-    funcol.crear_tarjetas(response);
     let buscar = document.getElementById("buscar");
-    buscar.addEventListener("input", function () {
+    let regiones = document.getElementById("regionesSelect");
+
+    function aplicarFiltros() {
       let ABuscar = buscar.value.toLowerCase();
-      let encontrado = response.filter((item) =>
-        item.name.toLowerCase().includes(ABuscar)
-      );
+      let regionSeleccionada = regiones.value;
+
+      let encontrado = response.filter((iterado) => {
+        let coincideNombre = iterado.name.toLowerCase().includes(ABuscar);
+        let coincideRegion =
+          regionSeleccionada == 0 || iterado.regionId == regionSeleccionada;
+        return coincideNombre && coincideRegion;
+      });
+
       funcol.crear_tarjetas(encontrado);
-    });
+    }
+
+    buscar.addEventListener("input", aplicarFiltros);
+
+    regiones.addEventListener("change", aplicarFiltros);
+
+    funcol.crear_tarjetas(response);
   });

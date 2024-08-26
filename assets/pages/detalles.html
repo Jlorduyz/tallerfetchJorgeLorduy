@@ -21,20 +21,30 @@
       </header>
       <main class="main">
         <section class="filtros">
+          <select name="" id="ciudadArea" class="areass">
+            <option value="0">Todo</option>
+            <option value="1">Ciudades</option>
+            <option value="2">Areas Naturales</option>
+          </select>
           <div class="busqueda">
             <input
               id="buscar"
               type="text"
-              placeholder="Buscar Departamento..."
+              placeholder="Buscar en el Departamento..."
             />
             <img src="../img/buscar.png" alt="" />
           </div>
         </section>
         <div id="padre1" class="padre"></div>
-        <h3>⏬Ciudades⏬</h3>
-        <div id="padre2" class="padre"></div>
-        <h3>⏬Areas Naturales⏬</h3>
-        <div id="padre3" class="padre"></div>
+
+        <div class="ciudades">
+          <h3 class="ttitulos">⏬Ciudades⏬</h3>
+          <div id="padre2" class="padre"></div>
+        </div>
+        <div class="areasVerdes">
+          <h3 class="ttitulos">⏬Areas Naturales⏬</h3>
+          <div id="padre3" class="padre"></div>
+        </div>
       </main>
       <footer class="footer">
         <p>2024-Jorge Lorduy</p>

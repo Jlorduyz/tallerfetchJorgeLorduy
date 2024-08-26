@@ -43,9 +43,10 @@
   color: white;
   margin: 20px;
 }
-h3 {
+.ttitulos {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: 700;
 }
 .boton_detalles {
   align-self: center;
@@ -175,6 +176,7 @@ footer p {
 .filtros {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .busqueda {
   display: flex;
@@ -198,7 +200,7 @@ footer p {
   transition-delay: 5s;
   &:hover {
     box-shadow: 0px 0px 15px #282aa1;
-    width: 270px;
+    width: 340px;
     opacity: 1;
     z-index: 0;
     transition-delay: 0ms;
@@ -207,4 +209,88 @@ footer p {
 .busqueda img {
   height: 50px;
   position: absolute;
+}
+.imgttarjeta {
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.tarjetaBig {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  height: 600px;
+  gap: 20px;
+  border-radius: 3px;
+  background: linear-gradient(#ffffff, #3f87a6);
+  box-shadow: 0px 0px 15px black;
+  animation: aparicion 100ms linear both;
+}
+@keyframes aparicion {
+  from {
+    scale: 2.2;
+    opacity: 0.3;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.textos {
+  font-size: 25px;
+  color: #1b1b1b;
+  padding: 15px;
+}
+.especs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 70px;
+}
+
+.textos span {
+  color: #000000;
+  font-weight: 600;
+}
+
+.regionesSelect {
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 18px;
+  width: 250px;
+  height: 40px;
+  align-self: center;
+  margin: 30px;
+}
+
+@media (max-width: 970px) {
+  .tarjetaBig {
+    flex-direction: column;
+    width: 80%;
+    height: 800px;
+  }
+  .imgttarjeta {
+    width: 100%;
+    height: 40%;
+  }
+  .especs {
+    gap: 20px;
+    padding-top: 40px;
+  }
+  .textos {
+    font-size: 18px;
+  }
+}
+.noVisible {
+  display: none;
+}
+.areass {
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 18px;
+  width: 250px;
+  height: 40px;
+  align-self: center;
+  margin: 30px;
 }
