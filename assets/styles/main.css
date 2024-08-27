@@ -175,17 +175,16 @@ footer p {
 }
 .filtros {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   height: 10vh;
 }
 .busqueda {
   display: flex;
-  flex-direction: row;
   justify-content: end;
   height: 50px;
   width: 270px;
-  align-self: self-end;
   padding: 20px;
 }
 .busqueda input {
@@ -261,7 +260,6 @@ footer p {
   font-size: 18px;
   width: 250px;
   height: 40px;
-  align-self: center;
   margin: 30px;
 }
 
@@ -281,6 +279,9 @@ footer p {
   }
   .textos {
     font-size: 18px;
+  }
+  .filtros {
+    margin-bottom: 40px;
   }
 }
 .noVisible {
