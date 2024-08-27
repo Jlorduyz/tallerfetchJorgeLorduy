@@ -57,6 +57,16 @@ fetch(URLNature)
         item.name.toLowerCase().includes(ABuscar)
       );
       funcol.crear_tarjetasNature(encontrado);
+      let padd = document.getElementById("padre2");
+      let padd2 = document.getElementById("padre3");
+      if ((padd.innerHTML.trim() === "") & (padd2.innerHTML.trim() === "")) {
+        let mensaje = document.createElement("div");
+        mensaje.innerHTML = `<p class="mensajess">No se encontraron resultados</p>`;
+        padd.appendChild(mensaje);
+        let mensajeDos = document.createElement("div");
+        mensajeDos.innerHTML = `<p class="mensajess">No se encontraron resultados</p>`;
+        padd2.appendChild(mensaje);
+      }
     });
   });
 

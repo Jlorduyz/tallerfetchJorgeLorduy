@@ -33,6 +33,12 @@ fetch(URLdepartamentos)
       });
 
       funcol.crear_tarjetas(encontrado);
+      let padd = document.getElementById("padre");
+      if (padd.innerHTML.trim() === "") {
+        let mensaje = document.createElement("div");
+        mensaje.innerHTML = `<p class="mensajess">No se encontraron resultados</p>`;
+        padd.appendChild(mensaje);
+      }
     }
 
     buscar.addEventListener("input", aplicarFiltros);
